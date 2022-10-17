@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Vanilla Number Roller</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <p>Since <span id="roller"></span></p>
+
+    <script src="simple-vanilla-number-roller.js"></script>
+
+    <script>
+        const el = document.getElementById('roller');
+
+        const options = {
+            autoStartDelay: 2000,
+            countFrom: new Date().getFullYear(),
+            countTo: 1990,
+            speedFrom: 500,
+            speedTo: 200,
+        };
+
+        const roller = new SimpleVanillaNumberRoller(el, options);
+
+        window.simpleVanillaNumberRoller = roller;
+    </script>
+
+    <noscript>Your browser does not support JavaScript!</noscript>
+</body>
+
+</html>
